@@ -1,0 +1,55 @@
+max.hole.pictures {
+	root * /srv/max.hole.pictures
+	file_server
+	templates
+	try_files {path}.html {path}
+	encode gzip
+}
+
+www.hole.pictures, hole.pictures {
+	root * /srv/hole.pictures
+	file_server {
+		index index.png
+	}
+	try_files {path}.png {path}
+	encode gzip
+}
+
+cool.hole.pictures {
+	root * /srv/hole.pictures
+	file_server {
+		browse
+	}
+	encode gzip
+}
+
+www.alexjonesbignaturals.com, alexjonesbignaturals.com {
+	root * /srv/alexjonesbignaturals.com
+	file_server {
+		index index.png
+	}
+	try_files {path}.png {path}
+	encode gzip
+}
+
+pope.hole.pictures {
+	root * /srv/pope.hole.pictures
+	file_server {
+		index index.png
+	}
+	try_files {path}.png {path}
+	encode gzip
+}
+
+www.bazinga-sheldon-consumerof.world, bazinga-sheldon-consumerof.world {
+	root * /srv/bazinga-sheldon-consumerof.world
+	file_server {
+		index index.png
+	}
+	try_files {path}.png {path}
+	encode gzip
+}
+
+www.crimecommitters.org, crimecommitters.org {
+	redir https://twitter.com/lieutenantbam 301
+}
