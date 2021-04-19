@@ -53,3 +53,12 @@ www.bazinga-sheldon-consumerof.world, bazinga-sheldon-consumerof.world {
 www.crimecommitters.org, crimecommitters.org {
 	redir https://twitter.com/lieutenantbam 301
 }
+
+alexjones.mommymilke.rs {
+	root * /srv/alexjones.mommymilke.rs
+	file_server {
+		index index.png
+	}
+	try_files {path}.png {path}
+	encode gzip
+}
