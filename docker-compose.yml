@@ -7,9 +7,17 @@ services:
         ports:
             - 80:80
             - 443:443
+        networks:
+            - web
+            - max.hole.pictures
         volumes: 
             - /srv/caddy:/etc/caddy
             - /srv/html:/srv
             - /srv/caddy/data:/data
             - /srv/caddy/config:/config
-        
+
+networks:
+    web:
+        name: web
+    max.hole.pictures:
+        external: true

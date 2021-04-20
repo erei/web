@@ -1,9 +1,12 @@
 max.hole.pictures {
 	root * /srv/max.hole.pictures
 	file_server
-	templates
 	try_files {path}.html {path}
 	encode gzip
+}
+
+max.hole.pictures/i {
+	reverse_proxy http://api:6969
 }
 
 www.hole.pictures, hole.pictures {
