@@ -3,10 +3,8 @@ max.hole.pictures {
 	file_server
 	try_files {path}.html {path}
 	encode gzip
-}
 
-max.hole.pictures/i {
-	reverse_proxy http://api:6969
+	reverse_proxy /i http://api:6969
 }
 
 www.hole.pictures, hole.pictures {
